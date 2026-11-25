@@ -49,7 +49,7 @@ This framework follows the Page Object Model (POM) design pattern to improve:
 
 ### Invalid Login Error
 
-![Invalid Login](Screenshots/invalid-login.png)
+![Invalid Login](Screenshots/login-error.png)
 
 ### Successful Order Completion
 
