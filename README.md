@@ -61,7 +61,13 @@ Extra temp code was added to delay for 2000ms and take a screenshot for all thre
 Clone repository:
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/kevola1/SauceDemoAutomation.git
+```
+
+Navigate to the project:
+
+```bash
+cd SauceDemoAutomation
 ```
 
 Install packages:
