@@ -43,13 +43,7 @@ public async Task Complete_Order()
         "10001");
 
     // Screenshot of successful order
-        await Page.WaitForTimeoutAsync(2000);
-
-        await Page.ScreenshotAsync(new()
-        {
-            Path = "docs/complete-order.png",
-            FullPage = true
-        });
+        await TakeScreenshot("complete-order");
 
     var message =
         await checkout.GetConfirmation();

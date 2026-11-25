@@ -42,19 +42,18 @@ This framework follows the Page Object Model (POM) design pattern to improve:
 - Playwright
 
 ## Test Execution Screenshots 
-Extra temp code was added to delay for 2000ms and take a screenshot for all three test cases for Github
 
 ### Successful Login
 
-![Successful Login](docs/login-success.png)
+![Successful Login](Screenshots/login-success.png)
 
 ### Invalid Login Error
 
-![Invalid Login](docs/invalid-login.png)
+![Invalid Login](Screenshots/invalid-login.png)
 
 ### Successful Order Completion
 
-![Order Completion](docs/complete-order.png)
+![Order Completion](Screenshots/complete-order.png)
 
 ## Installation
 

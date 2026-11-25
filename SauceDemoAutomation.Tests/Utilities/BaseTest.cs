@@ -29,9 +29,31 @@ public class BaseTest
         await Page.GotoAsync(config.BaseUrl);   
     }
 
+    protected async Task TakeScreenshot(string fileName)
+    {
+    var solutionRoot = Path.GetFullPath(
+        Path.Combine(
+            Directory.GetCurrentDirectory(),
+            @"..\..\..\.."));
+
+    var screenshotsFolder =
+        Path.Combine(solutionRoot, "Screenshots");
+
+    Directory.CreateDirectory(screenshotsFolder);
+
+    await Page.ScreenshotAsync(new()
+    {
+        Path = Path.Combine(
+            screenshotsFolder,
+            $"{fileName}.png"),
+
+        FullPage = true
+    });
+    }
+
     [TearDown]
     public async Task TearDown()
     {
         await Browser.CloseAsync();
     }
-}
+    }

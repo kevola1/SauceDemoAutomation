@@ -19,13 +19,8 @@ public class LoginTests : BaseTest
             TestUsers.StandardUser,
             TestUsers.Password);
 
-        await Page.WaitForTimeoutAsync(2000);       
+       await TakeScreenshot("login-success");
 
-        await Page.ScreenshotAsync(new()
-            {
-                Path = "docs/login-success.png",
-                FullPage = true
-            });
         // Assert
         Page.Url.Should().Contain("inventory");
     }
@@ -41,13 +36,7 @@ public class LoginTests : BaseTest
             "standard_user",
             "secret_sauc");
 
-        await Page.WaitForTimeoutAsync(2000);
-
-        await Page.ScreenshotAsync(new()
-            {
-                Path = "docs/login-error.png",
-                FullPage = true
-            });
+        await TakeScreenshot("login-error");
 
         var errorMessage = await loginPage.GetErrorMessage();
 
